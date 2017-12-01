@@ -112,6 +112,7 @@ class Coin(Workflow):
         return self
 
     def add(self, *args):
+        args = list(args)
         if len(args) >= 2 and args[1].isdigit():
             self.add_item(valid=True, icon=COIN_ICON,
                           title='Add %s to the list at position %s' % (args[0].upper(), args[1]),
